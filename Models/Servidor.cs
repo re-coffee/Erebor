@@ -8,7 +8,6 @@ namespace Erebor.Models
         public int IdCategoria { get; set; }
         public string? Hostname { get; set; }
         public string? Ip { get; set; }
-        public int Porta { get; set; }
 
         [ForeignKey("IdCategoria")]
         public virtual Categoria? Categoria { get; set; }

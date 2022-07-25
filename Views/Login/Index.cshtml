@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Login";
+    Layout = null;
+}
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/login.css" />
+</head>
+<body>
+    @using (Html.BeginForm("Autorizar", "Login", FormMethod.Post))
+    {
+    <div class="page-div">
+        <div class="login-div">
+            <div class="symbol-div">
+                <img class="logo" src="~/Imagens/logo.png" />
+                <h4>Administrador<br /></h4>
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        @*<td>@Html.EditorFor(model => model.Login, new { htmlAttributes = new { @class = "editorFor", required = "required", placeholder = "Usuário", size = "35%" } })</td>*@
+                    </tr>
+                    <tr>
+                        @*<td class="validacao-td">@Html.ValidationMessageFor(model => model.Login)</td>*@
+                    </tr>
+                    <tr>
+                        @*<td>@Html.EditorFor(model => model.Senha, new { htmlAttributes = new { @class = "editorFor", required="required", placeholder = "Senha", size = "35%" } })</td>*@
+                    </tr>
+                    <tr>
+                        @*<td class="validacao-td">@Html.ValidationMessageFor(model => model.Senha)</td>*@
+                    </tr>
+                </table>
+            </div>
+            <input type="submit" class="confirmar-input" value="Entrar" name="Entrar" /><br />
+            @*<label class="validacao-td" style="padding-left: 20px;">@Html.DisplayFor(model => model.ErroLogin)</label>*@
+        </div>
+    </div>
+    }
+</body>
+</html>
+

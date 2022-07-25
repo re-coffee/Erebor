@@ -1,0 +1,97 @@
+﻿@{
+    var contexto = new Erebor.DAL.EreborContexto();
+}
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    //  google.charts.load("current", {packages:["corechart"]});
+    //  google.charts.setOnLoadCallback(drawChart);
+    //  function drawChart() {
+    //      var data = google.visualization.arrayToDataTable([
+    //          ['Contrato', 'Quantidade Clientes'],
+    //          ['BPO', prodContexto.Clientes.Count(x => x.IdContrato == 1)],
+    //          ['BSP', prodContexto.Clientes.Count(x => x.IdContrato == 2)],
+    //          ['SAAS',prodContexto.Clientes.Count(x => x.IdContrato == 3)],
+    //          ['Cloud', prodContexto.Clientes.Count(x => x.IdContrato == 4)],
+    //    ]);
+
+    //    var options = {
+    //        pieHole: 0.1,
+    //        is3D: true
+    //    };
+
+    //    var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+    //    chart.draw(data, options);
+    //};
+</script>
+<link href="~/css/dash.css" rel="stylesheet" />
+
+    <div class="dash-div">
+    <table class="dash-table">
+        <tr>
+            <td class="headerdash-td">
+                <div style="float: left;"><b>Usuários Ativos</b></div>
+                <div style="text-align: right;">
+                    <i class="fa fa-user card-icon" style="color: rgba(56, 100, 173, 10); background-color: rgba(88, 284,384, 0.3); border-color: rgba(88, 284, 200, 0.1);" aria-hidden="true"></i>
+                </div>
+                <div class="numero-div">
+                    @*@Html.Raw(usuario.TotalUsuarios)*@
+                </div>
+                <hr style="background-color: rgba(88, 284,384, 0.2); height: 7.5px; border: 0px; " />
+            </td>
+
+
+            <td class="headerdash-td">
+                <div style="float: left;"><b>Servidores</b></div>
+                <div style="text-align: right;">
+                    <i class="fa fa-server card-icon" style="color: rgba(120, 56, 173, 10); background-color: rgba(200, 88, 284, 0.3); border-color: rgba(88, 284, 200, 0.1);" aria-hidden="true"></i>
+                </div>
+                <div class="numero-div">
+                    @*@Html.Raw(usuario.TotalServidores)*@
+                </div>
+                <hr style="background-color: rgba(200, 88, 284, 0.2); height: 7.5px; border: 0px; " />
+            </td>
+
+
+            <td class="headerdash-td">
+                <div style="float: left;"><b>Clientes ativos</b></div>
+                <div style="text-align: right;">
+                    <i class="fa fa-briefcase card-icon" style="color: rgba(56, 173, 120, 10); background-color: rgba(88, 284, 200, 0.3); border-color: rgba(88, 284, 200, 0.1);" aria-hidden="true"></i>
+                </div>
+                <div class="numero-div">
+                    @*@Html.Raw(usuario.TotalClientes)*@
+                </div>
+                <hr style="background-color: rgba(88, 284, 200, 0.3); height: 7.5px; border: 0px; " />
+            </td>
+
+
+        </tr>
+    </table>
+    <table class="dash-table">
+        <tr>
+            <td class="rowdash-td" style="width: 284px; padding-right: 0;">
+                <b>Clientes por contrato</b>
+                <br />
+                <div id="donutchart" style="width: 307px; height: 160px;"></div>
+                <hr style="background-color: rgba(212, 150, 0, 0.3); height: 7.5px; border: 0px; margin-right: 7px;" />
+            </td>
+
+            <td class="rowdash-td">
+                <b>Num sei</b>
+                <br />
+                <br />
+            </td>
+        </tr>
+    </table>
+
+
+    <table class="dash-table">
+        <tr>
+            <td class="graphdash-td">
+                <b></b>
+                <br />
+                
+            </td>
+
+        </tr>
+    </table>
+</div>

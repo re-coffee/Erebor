@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Erebor.Migrations
 {
     [DbContext(typeof(EreborContexto))]
-    [Migration("20220723175132_v1.0")]
+    [Migration("20220725140328_v1.0")]
     partial class v10
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -52,10 +52,7 @@ namespace Erebor.Migrations
             modelBuilder.Entity("Erebor.Models.Cliente", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<bool>("Ativo")
                         .HasColumnType("bit");
@@ -166,9 +163,6 @@ namespace Erebor.Migrations
 
                     b.Property<string>("Ip")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Porta")
-                        .HasColumnType("int");
 
                     b.HasKey("Id");
 

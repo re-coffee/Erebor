@@ -11,6 +11,7 @@ namespace Erebor.Models
         public string? Descricao { get; set; }
         public string? Caminho { get; set; }
         public int Porta { get; set; }
+        public string? Regedit { get; set; }
 
         [ForeignKey("IdCliente")]
         public virtual Cliente? Cliente { get; set; }

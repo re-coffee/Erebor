@@ -7,12 +7,13 @@ namespace Erebor.Models
     public class Cliente
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
         public int IdContrato { get; set; }
         public int IdServidorBanco { get; set; }
         public string? Nome { get; set; }
         public bool Ativo { get; set; }
-        public DateTime DataInsercao { get; set; }
+        public DateTime DataInsercao { get; set; } = DateTime.Now;
 
         [ForeignKey("IdContrato")]
         public virtual Contrato? Contrato { get; set; }

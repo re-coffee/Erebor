@@ -1,0 +1,72 @@
+﻿body {
+    font-family: 'PT Sans', sans-serif;
+    background-color: rgba(235, 235, 235, 1);
+}
+
+.page-div {
+    box-sizing: inherit;
+}
+
+.login-div {
+    position: absolute;
+    left: 38%;
+    top: 20%;
+    height: 400px;
+    width: 350px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    text-align-last: center;
+    background-color: white;
+}
+
+.symbol-div {
+    width: 100%;
+    user-select: none;
+}
+
+.logo {
+    height: 100px;
+    padding-top: 15px;
+    user-select: none;
+}
+
+div h4 {
+    margin-top: 0px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgba(6, 115, 66, 1);
+}
+
+.form-td {
+    position: absolute;
+}
+
+.editorFor {
+    margin-left: 3%;
+    width: 57%;
+    font-size: 17px;
+    line-height: 1.5;
+    background: white;
+    text-align-last: left;
+}
+
+.validacao-td {
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(176, 30, 19);
+    height: 18px;
+    text-align: right;
+    padding-left: 74px;
+    text-align-last: left;
+}
+
+.confirmar-input {
+    margin-left: 2%;
+    width: 57%;
+    font-size: 18px;
+    line-height: 2;
+    background: rgba(6, 115, 66, 1);
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+}

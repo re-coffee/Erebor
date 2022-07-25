@@ -49,7 +49,6 @@ namespace Erebor.Migrations
                     IdCategoria = table.Column<int>(type: "int", nullable: false),
                     Hostname = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Ip = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Porta = table.Column<int>(type: "int", nullable: false),
                     Ativo = table.Column<bool>(type: "bit", nullable: false),
                     DataInsercao = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -67,8 +66,7 @@ namespace Erebor.Migrations
                 name: "Cliente",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<int>(type: "int", nullable: false),
                     IdContrato = table.Column<int>(type: "int", nullable: false),
                     IdServidorBanco = table.Column<int>(type: "int", nullable: false),
                     Nome = table.Column<string>(type: "nvarchar(max)", nullable: true),
