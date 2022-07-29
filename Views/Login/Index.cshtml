@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Erebor.Models.Usuario
+@{
     ViewBag.Title = "Login";
     Layout = null;
 }
@@ -18,21 +19,21 @@
             <div>
                 <table>
                     <tr>
-                        @*<td>@Html.EditorFor(model => model.Login, new { htmlAttributes = new { @class = "editorFor", required = "required", placeholder = "Usuário", size = "35%" } })</td>*@
+                        <td>@Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "editorFor", required = "required", placeholder = "Usuário", size = "35%" } })</td>
                     </tr>
                     <tr>
-                        @*<td class="validacao-td">@Html.ValidationMessageFor(model => model.Login)</td>*@
+                        <td class="validacao-td">@Html.ValidationMessageFor(model => model.Nome)</td>
                     </tr>
                     <tr>
-                        @*<td>@Html.EditorFor(model => model.Senha, new { htmlAttributes = new { @class = "editorFor", required="required", placeholder = "Senha", size = "35%" } })</td>*@
+                        <td>@Html.EditorFor(model => model.Senha, new { htmlAttributes = new { @class = "editorFor", required="required", placeholder = "Senha", size = "35%" } })</td>
                     </tr>
                     <tr>
-                        @*<td class="validacao-td">@Html.ValidationMessageFor(model => model.Senha)</td>*@
+                        <td class="validacao-td">@Html.ValidationMessageFor(model => model.Senha)</td>
                     </tr>
                 </table>
             </div>
             <input type="submit" class="confirmar-input" value="Entrar" name="Entrar" /><br />
-            @*<label class="validacao-td" style="padding-left: 20px;">@Html.DisplayFor(model => model.ErroLogin)</label>*@
+            <label class="validacao-td" style="padding-left: 20px;">@Html.DisplayFor(model => model.ErroLogin)</label>
         </div>
     </div>
     }

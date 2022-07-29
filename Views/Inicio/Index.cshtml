@@ -1,5 +1,4 @@
 ﻿@{
-    var contexto = new Erebor.DAL.EreborContexto();
 }
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript">
@@ -34,6 +33,7 @@
                     <i class="fa fa-user card-icon" style="color: rgba(56, 100, 173, 10); background-color: rgba(88, 284,384, 0.3); border-color: rgba(88, 284, 200, 0.1);" aria-hidden="true"></i>
                 </div>
                 <div class="numero-div">
+                    @*@Session["asdf"]*@
                     @*@Html.Raw(usuario.TotalUsuarios)*@
                 </div>
                 <hr style="background-color: rgba(88, 284,384, 0.2); height: 7.5px; border: 0px; " />
@@ -89,7 +89,21 @@
             <td class="graphdash-td">
                 <b></b>
                 <br />
-                
+                <table>
+                    <tr>
+                        <td>
+                            @*<b>@Model.Roles.Where(x=> x.Id == 1).FirstOrDefault().Sigla</b>*@
+                        </td>
+                        <td>
+@*                            <b>@foreach(var item in Model.Roles.Where(x=> x.Id == 1).FirstOrDefault().Menus)
+                                {
+                                    @item.Action  @item.Controller                                    
+                                }
+                            </b>*@
+                        </td>
+                            
+                    </tr>
+                </table>
             </td>
 
         </tr>

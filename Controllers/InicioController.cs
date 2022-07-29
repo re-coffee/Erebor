@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Erebor.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Erebor.Controllers
 {

@@ -5,7 +5,7 @@ namespace Erebor.DAL
 {
     public class EreborContexto : DbContext
     {
-        public EreborContexto() : base() { }
+        public EreborContexto() { }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -14,8 +14,7 @@ namespace Erebor.DAL
                     .SetBasePath(Directory.GetCurrentDirectory())
                     .AddJsonFile("appsettings.json")
                     .Build();
-                var connectionString = configuration.GetConnectionString("EreborContext");
-                optionsBuilder.UseSqlServer(connectionString);
+                optionsBuilder.UseSqlServer(configuration.GetConnectionString("EreborContext"));
             }
         }
         public DbSet<Cliente>? Clientes { get; set; }
@@ -23,5 +22,10 @@ namespace Erebor.DAL
         public DbSet<Servidor>? Servidores { get; set; }
         public DbSet<Categoria>? Categorias { get; set; }
         public DbSet<Contrato>? Contratos { get; set; }
+        public DbSet<Usuario>? Usuarios { get; set; }
+        public DbSet<Role>? Roles { get; set; }
+        public DbSet<Menu>? Menus { get; set; }
+        
+
     }
 }
